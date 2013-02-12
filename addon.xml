@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.ansa"
+       name="ANSA"
+       version="1.0.0"
+       provider-name="Nightflyer">
+  <requires>
+    <import addon="xbmc.python" version="1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary>Le video notizie di ANSA</summary>
+    <description>Gli ultimi video realizzati dai reporter dell'ANSA e dei suoi associati provenienti dall'Italia e dal tutto il mondo.</description>
+  </extension>
+</addon>
+
