@@ -1,3 +1,7 @@
+[B]1.0.1[/B]
+- showing video pubdate in the title
+- added addon.xml optional metadata
+
 [B]1.0.0[/B]
 - first release
 
