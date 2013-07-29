@@ -48,14 +48,13 @@ def show_video_files(url):
     ansa = Ansa()
     items = ansa.getVideoByChannel(url)
     for item in items:
-        liStyle=xbmcgui.ListItem(item["title"], thumbnailImage=item["thumb"])
+        title = item["title"] + " (" + time.strftime("%d/%m/%Y %H:%M", item["date"]) + ")"
+        liStyle=xbmcgui.ListItem(title, thumbnailImage=item["thumb"])
         liStyle.setInfo(type="video",
             infoLabels={"Tvshowtitle": item["channel"], 
-                        "Title": item["title"],
-                        "Date": time.strftime("%d.%m.%Y", item["date"])
+                        "Title": title
                         })
         addLinkItem(item["url"], liStyle)
-    #xbmcplugin.addSortMethod(handle, xbmcplugin.SORT_METHOD_DATE)
     xbmcplugin.endOfDirectory(handle=handle, succeeded=True)
 
 
