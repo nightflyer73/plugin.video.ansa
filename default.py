@@ -51,8 +51,7 @@ def show_video_files(url):
         title = item["title"] + " (" + time.strftime("%d/%m/%Y %H:%M", item["date"]) + ")"
         liStyle=xbmcgui.ListItem(title, thumbnailImage=item["thumb"])
         liStyle.setInfo(type="video",
-            infoLabels={"Tvshowtitle": item["channel"], 
-                        "Title": title
+            infoLabels={"Title": title
                         })
         addLinkItem(item["url"], liStyle)
     xbmcplugin.endOfDirectory(handle=handle, succeeded=True)
